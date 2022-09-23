@@ -14,7 +14,7 @@
      <section>    
         <header>Weather Dashboard</header>
             <h1 Class="searchTitle">Search for a City</h1>
-            <input type="search" query="searchBar"placeholder="Enter a city" name="city-search">
+            <input type="text" class="search-bar" query="searchBar" placeholder="Enter a city" name="city-search">
             <button  class="search-btn">Search</button>
             <br>
             <br>
@@ -24,12 +24,12 @@
 
      <section>
         <article class="container">
-            <h2 class="city">City name</h2>
-            <p id="todays-date"></p>
+            <h2 class="city"></h2>
+            <p class="hide" id="todays-date"></p>
                 <img src="" alt="" class="icon">
-                <div class="temp">69°F</div>
-                <div class="humidity">%</div>
-                <div class="wind">mph</div>
+                <div class="temp"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
         </article>
      </section>
 
@@ -49,6 +49,6 @@
      </section>
 
 
-    <script src="./Assets/script.js"></script>
+    <script src="./Assets/script.js" defer></script>
 </body>
 </html>
