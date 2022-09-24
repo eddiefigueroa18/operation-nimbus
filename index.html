@@ -14,35 +14,62 @@
     <header>Weather Dashboard</header>
      <section class="card-1">    
             <h1 Class="searchTitle">Search for a City</h1>
-            <input type="text" class="search-bar" query="searchBar" placeholder="Enter a city" name="city-search">
+            <input type="text" class="search-bar" query="searchBar" placeholder="Enter City Name" name="city-search">
             <button  class="search-btn">Search</button>
-            <br>
-            <br>
+            <p class="recent-searches"></p>
             <!-- put the recently searched items below the search bar  -->
      </section>
 
 <!-- This is the current-day weather container  -->
      <section class="container-1">
-        <h2 class="city">city</h2>
-        <p class="hide" id="todays-date"></p>
+        <h2 class="city"></h2>
+        <p id="todays-date"></p>
             <img src="" alt="" class="icon">
-            <div class="temp">temp</div>
-            <div class="humidity">hum</div>
-            <div class="wind">speed</div>
+            <div class="temp"></div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
      </section>
 
-<br>
-<br>
 
 <!-- This is the forecast for the next 5 days -->
      <section class="container-2">
         <table class="5-day-table">
             <tr>
-                <td class="Forecast-1">1</td>
-                <td class="Forecast-2">2</td>
-                <td class="Forecast-3">3</td>
-                <td class="Forecast-4">4</td>
-                <td class="Forecast-5">5</td>
+                <td class="forecast" id="day-1">
+                    <div class="day">asdf</div>
+                    <img src="" alt="" class="icon">
+                    <div class="temp">asdf</div>
+                    <div class="humidity">asdf</div>
+                    <div class="wind">asdf</div>
+                 </td>
+                <td class="forecast" id="day-2">
+                    <div class="day">asdf</div>
+                    <img src="" alt="" class="icon">
+                    <div class="temp">asdf</div>
+                    <div class="humidity">asdf</div>
+                    <div class="wind">asdf</div>
+                </td>
+                <td class="forecast" id="day-3">
+                    <div class="day">asdf</div>
+                    <img src="" alt="" class="icon">
+                    <div class="temp">asdf</div>
+                    <div class="humidity">asdf</div>
+                    <div class="wind">asdf</div>
+                </td>
+                <td class="forecast" id="day-4">
+                    <div class="day">asdf</div>
+                    <img src="" alt="" class="icon">
+                    <div class="temp">asdf</div>
+                    <div class="humidity">asdf</div>
+                    <div class="wind">asdf</div>
+                </td>
+                <td class="forecast" id="day-5">
+                    <div class="day">asdf</div>
+                    <img src="" alt="" class="icon">
+                    <div class="temp">asdf</div>
+                    <div class="humidity">asdf</div>
+                    <div class="wind">asdf</div>
+                </td>
             </tr>
         </table>
      </section>

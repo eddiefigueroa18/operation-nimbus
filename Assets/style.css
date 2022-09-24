@@ -15,6 +15,7 @@ header {
     font-size: 36px;
     text-align: center;
     padding: 10px;
+    border-radius: 5px;
 }
 
 
@@ -28,9 +29,17 @@ header {
     align-items: center;
     background: grey;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 5%;
+}
+
+.search-bar {
+    border-radius: 5px;
+}
+
+.search-btn {
+    border-radius: 5px;
 }
 
 .container-1 {
@@ -38,13 +47,21 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(39, 155, 155);
     padding: 20px;
-
-    
+    border-radius: 5px;
 }
 
+/* Can the text-align be taken out?  */
 .container-2 {
     text-align: center;
     background-color: brown;
+}
+
+.forecast {
+    background-color:bisque;
+    /* font-size: 17px; */
+    outline: purple;
+    padding: 10px;
+    margin: 10px;
 }
