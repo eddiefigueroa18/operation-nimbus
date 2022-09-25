@@ -31,12 +31,14 @@ let weather = {
     },
 };
 
+
 //This creates a function to listen fo the click on the search button 
 //Which then goes into the VAR "Weather" and executes the "search" function above
 document.querySelector(".search-btn").addEventListener("click", function () {
     weather.search ();
-});
+    forecast.search2 ();
 
+});
 
 /**  fix this **/
 //This is an extra feature that allow you to press enter when you search instead of having to press the search button every time 
@@ -47,3 +49,37 @@ document.querySelector(".search-btn").addEventListener("click", function () {
 //         weather.search();
 //     }
 // });
+
+
+let forecast = {
+    "apiKey": "fe350fcf1bdf0b9498e33816a7a5fca8",
+    fetchForecast: function (city) {
+        fetch ("https://api.openweathermap.org/data/2.5/forecast?q="
+        + city
+        + "&units=imperial&appid="
+        + this.apiKey)
+        .then((response) => response.json())
+        .then((data) => this.displayForecast(data));
+    },
+
+    displayForecast: function (data) {
+        for (i=0;i<5;i++) {
+            const {name} = data;
+            const {icon} = data.weather[0].icon;
+            const {temp} = data.main;
+            const {humidity} = data.main;
+            const {speed} = data.wind;
+
+            document.querySelector(".fDate" + i).innerText = name;
+            document.querySelector(".icon" + i).src = "https://openweathermap.org/img/wn/"+ icon + ".png";
+            document.querySelector(".fTemp" + i).innerText = temp + "°F";
+            document.querySelector(".fWind" + i).innerText = "Wind Speed: " + speed + " mph";
+            document.querySelector(".fHumidity" + i).innerText = "Humidity: " + humidity + "%";
+        };
+    },
+    search2: function () {
+        this.fetchForecast(document.querySelector(".search-bar").value);
+    },
+};
+
+

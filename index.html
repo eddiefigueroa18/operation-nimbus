@@ -11,14 +11,19 @@
 </head>
 
 <body> 
+    <!-- this is the search area -->
     <header>Weather Dashboard</header>
      <section class="card-1">    
             <h1 Class="searchTitle">Search for a City</h1>
+            <!-- Search Bar  -->
             <input type="text" class="search-bar" query="searchBar" placeholder="Enter City Name" name="city-search">
+            <!-- Search Btn  -->
             <button  class="search-btn">Search</button>
             <p class="recent-searches"></p>
             <!-- put the recently searched items below the search bar  -->
      </section>
+
+
 
 <!-- This is the current-day weather container  -->
      <section class="container-1">
@@ -31,49 +36,53 @@
      </section>
 
 
+
+
 <!-- This is the forecast for the next 5 days -->
      <section class="container-2">
         <table class="5-day-table">
             <tr>
                 <td class="forecast" id="day-1">
-                    <div class="day">asdf</div>
-                    <img src="" alt="" class="icon">
-                    <div class="temp">asdf</div>
-                    <div class="humidity">asdf</div>
-                    <div class="wind">asdf</div>
+                    <div class="fDate1">asdf</div>
+                    <img src="" alt="" class="icon1">
+                    <div class="fTemp1">asdf</div>
+                    <div class="fHumidity1">asdf</div>
+                    <div class="fWind1">asdf</div>
                  </td>
                 <td class="forecast" id="day-2">
-                    <div class="day">asdf</div>
-                    <img src="" alt="" class="icon">
-                    <div class="temp">asdf</div>
-                    <div class="humidity">asdf</div>
-                    <div class="wind">asdf</div>
+                    <div class="fDate2">asdf</div>
+                    <img src="" alt="" class="icon2">
+                    <div class="fTemp2">asdf</div>
+                    <div class="fHumidity2">asdf</div>
+                    <div class="fWind2">asdf</div>
                 </td>
                 <td class="forecast" id="day-3">
-                    <div class="day">asdf</div>
-                    <img src="" alt="" class="icon">
-                    <div class="temp">asdf</div>
-                    <div class="humidity">asdf</div>
-                    <div class="wind">asdf</div>
+                    <div class="fDate3">asdf</div>
+                    <img src="" alt="" class="icon3">
+                    <div class="fTemp3">asdf</div>
+                    <div class="fHumidity3">asdf</div>
+                    <div class="fWind3">asdf</div>
                 </td>
                 <td class="forecast" id="day-4">
-                    <div class="day">asdf</div>
-                    <img src="" alt="" class="icon">
-                    <div class="temp">asdf</div>
-                    <div class="humidity">asdf</div>
-                    <div class="wind">asdf</div>
+                    <div class="fDate4">asdf</div>
+                    <img src="" alt="" class="icon4">
+                    <div class="fTemp4">asdf</div>
+                    <div class="fHumidity4">asdf</div>
+                    <div class="fWind4">asdf</div>
                 </td>
                 <td class="forecast" id="day-5">
-                    <div class="day">asdf</div>
-                    <img src="" alt="" class="icon">
-                    <div class="temp">asdf</div>
-                    <div class="humidity">asdf</div>
-                    <div class="wind">asdf</div>
+                    <div class="fDate5">asdf</div>
+                    <img src="" alt="" class="icon5">
+                    <div class="fTemp5">asdf</div>
+                    <div class="fHumidity5">asdf</div>
+                    <div class="fWind5">asdf</div>
                 </td>
             </tr>
         </table>
      </section>
 
+
+     <!-- forecast.fetchForecast("tucson") -->
 
     <script src="./Assets/script.js" defer></script>
 </body>
