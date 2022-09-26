@@ -19,7 +19,7 @@
             <input type="text" class="search-bar" query="searchBar" placeholder="Enter City Name" name="city-search">
             <!-- Search Btn  -->
             <button  class="search-btn">Search</button>
-            <p class="recent-searches"></p>
+            <ul class="recent-searches" id="search-history"></ul>
             <!-- put the recently searched items below the search bar  -->
      </section>
 
@@ -27,12 +27,14 @@
 
 <!-- This is the current-day weather container  -->
      <section class="container-1">
-        <h2 class="city"></h2>
-        <p id="todays-date"></p>
-            <img src="" alt="" class="icon">
-            <div class="temp"></div>
-            <div class="humidity"></div>
-            <div class="wind"></div>
+        <div class="current-weather">
+            <h2 class="city"></h2>
+            <p id="todays-date"></p>
+                <img src="" alt="" class="icon">
+                <div class="temp"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
+        </div>
      </section>
 
 
@@ -43,39 +45,39 @@
         <table class="5-day-table">
             <tr>
                 <td class="forecast" id="day-1">
-                    <div class="fDate1">asdf</div>
+                    <div id="fDate1">asdf</div>
                     <img src="" alt="" class="icon1">
-                    <div class="fTemp1">asdf</div>
-                    <div class="fHumidity1">asdf</div>
-                    <div class="fWind1">asdf</div>
+                    <div id="fTemp1">asdf</div>
+                    <div id="fHumidity1">asdf</div>
+                    <div id=fWind1">asdf</div>
                  </td>
                 <td class="forecast" id="day-2">
-                    <div class="fDate2">asdf</div>
+                    <div id="fDate2">asdf</div>
                     <img src="" alt="" class="icon2">
-                    <div class="fTemp2">asdf</div>
-                    <div class="fHumidity2">asdf</div>
-                    <div class="fWind2">asdf</div>
+                    <div id="fTemp2">asdf</div>
+                    <div id="fHumidity2">asdf</div>
+                    <div id=fWind2">asdf</div>
                 </td>
                 <td class="forecast" id="day-3">
-                    <div class="fDate3">asdf</div>
+                    <div id="fDate3">asdf</div>
                     <img src="" alt="" class="icon3">
-                    <div class="fTemp3">asdf</div>
-                    <div class="fHumidity3">asdf</div>
-                    <div class="fWind3">asdf</div>
+                    <div id="fTemp3">asdf</div>
+                    <div id="fHumidity3">asdf</div>
+                    <div id=fWind3">asdf</div>
                 </td>
                 <td class="forecast" id="day-4">
-                    <div class="fDate4">asdf</div>
+                    <div id="fDate4">asdf</div>
                     <img src="" alt="" class="icon4">
-                    <div class="fTemp4">asdf</div>
-                    <div class="fHumidity4">asdf</div>
-                    <div class="fWind4">asdf</div>
+                    <div id="fTemp4">asdf</div>
+                    <div id="fHumidity4">asdf</div>
+                    <div id=fWind4">asdf</div>
                 </td>
                 <td class="forecast" id="day-5">
-                    <div class="fDate5">asdf</div>
+                    <div id="fDate5">asdf</div>
                     <img src="" alt="" class="icon5">
-                    <div class="fTemp5">asdf</div>
-                    <div class="fHumidity5">asdf</div>
-                    <div class="fWind5">asdf</div>
+                    <div id="fTemp5">asdf</div>
+                    <div id="fHumidity5">asdf</div>
+                    <div id=fWind5">asdf</div>
                 </td>
             </tr>
         </table>
