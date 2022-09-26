@@ -57,6 +57,7 @@ header {
 }
 
 .container-1 {
+    font-size: 17px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +97,7 @@ header {
 
 .forecast {
     background-color:bisque;
-    /* font-size: 17px; */
+    font-size: 17px;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -109,7 +110,7 @@ header {
 
 }
 .icon {
-    background-color: rgb(255, 255, 255);
-    clip-path: circle();
-    padding-bottom: 10px;
+    background-color: rgb(192, 192, 192);
+    /* clip-path: circle(); */
+    border-radius: 3px;
 }
