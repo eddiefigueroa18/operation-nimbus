@@ -99,10 +99,9 @@ function searchHistory(history) {
         var li = document.createElement("li");
         var recentSearchBtn = document.createElement("button");
         recentSearchBtn.innerHTML = history[i];
-
-        recentSearchBtn.classList.add("recent-search-btn");
         recentSearchBtn.append(li);
         recentSearchBtn.append(recentSearchBtn);
-        recentSearchBtn.addEventListener("click", currentWeather)
+        recentSearchBtn.classList.add("recent-search-btn");
+        // recentSearchBtn.addEventListener("click", currentWeather)
     }
 }

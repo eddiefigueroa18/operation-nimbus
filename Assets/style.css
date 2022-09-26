@@ -3,19 +3,33 @@
 }
 
 body {
-    background-color: #222;
+    /* background-color: #252934; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../Assets/rock.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+
+
 header {
-    background-color: blueviolet;
+    background-color: rgba(219, 28, 28, 0.582);
     font-size: 36px;
     text-align: center;
     padding: 10px;
+    padding: 20px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 
@@ -23,15 +37,15 @@ header {
     display: none;
 } */
 
-.card-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: grey;
-    padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    border-radius: 5%;
+.card {
+    margin-top: 250px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .search-bar {
@@ -47,21 +61,55 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(39, 155, 155);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    /* background-color: rgb(39, 155, 155); */
     padding: 20px;
     border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Can the text-align be taken out?  */
 .container-2 {
     text-align: center;
-    background-color: brown;
+    background-color: brown; 
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
+/* 
+.forecast-table {
+    padding: 15px;
+    outline-style: dashed;
+} */
 
 .forecast {
     background-color:bisque;
     /* font-size: 17px; */
-    outline: purple;
     padding: 10px;
     margin: 10px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+.icon {
+    background-color: rgb(255, 255, 255);
+    clip-path: circle();
+    padding-bottom: 10px;
 }
