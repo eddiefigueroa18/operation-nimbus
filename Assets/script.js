@@ -2,6 +2,7 @@
 var today = moment();
 $("#todays-date").text(today.format("MMM Do, YYYY"));
 
+
 //------------------------------------------------------------------------------------//
 
 //This function makes the call to the API
@@ -92,16 +93,36 @@ document.querySelector(".search-btn").addEventListener("click", function () {
 //     },
 // };
 
+const searchBar = document.querySelector("#searchBar") //cityInput
+const submitbtn = document.querySelector("#submit"); //submitBtn
+const cityRef = document.querySelector("#search-history"); //cityref
+var city;
+var cityName;
+var cities;
 
-function searchHistory(history) {
-    document.querySelector(".recent-searches").innerHTML = "";
-    for (i = 0; i <history.length; i++) {
-        var li = document.createElement("li");
-        var recentSearchBtn = document.createElement("button");
-        recentSearchBtn.innerHTML = history[i];
-        recentSearchBtn.append(li);
-        recentSearchBtn.append(recentSearchBtn);
-        recentSearchBtn.classList.add("recent-search-btn");
+submitbtn.addEventListener("click",searchHistory);
+
+
+function searchHistory() {
+    var newList = document.createElement("li");
+    var recentSearchBtn = document.createElement("button")
+    cityRef.appendChild(newList);
+    newList.appendChild(recentSearchBtn);
+    cityName = searchBar.val;
+    cities = (cityName);
+    recentSearchBtn.textContent = cityName;
+    localStorage.setItem("City",JSON.stringify(cities))
+    localStorage.getItem("City");
+
+
+    // document.querySelector(".recent-searches").innerHTML = "";
+    // for (i = 0; i <history.length; i++) {
+    //     var li = document.createElement("li");
+    //     var recentSearchBtn = document.createElement("button");
+    //     recentSearchBtn.innerHTML = history[i];
+    //     recentSearchBtn.append(li);
+    //     recentSearchBtn.append(recentSearchBtn);
+    //     recentSearchBtn.classList.add("recent-search-btn");
+
         // recentSearchBtn.addEventListener("click", currentWeather)
     }
-}
