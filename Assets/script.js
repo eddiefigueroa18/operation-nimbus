@@ -9,12 +9,12 @@ var forecasts = document.querySelectorAll(".forecasts");
 //When page first load it already has a city to show the weather from 
 window.onload = function() { 
     startLoad.loadWeather ()
-   onForecast.onfetchForecast() 
+    onForecast.onfetchForecast() 
 } 
 let startLoad = {
     "apiKey": "fe350fcf1bdf0b9498e33816a7a5fca8",
-    loadWeather: function (seattle) {
-       fetch ("https://api.openweathermap.org/data/2.5/weather?q=seattle" 
+    loadWeather: function (cupertino) {
+       fetch ("https://api.openweathermap.org/data/2.5/weather?q=cupertino" 
         + "&units=imperial&appid=" 
         + this.apiKey)
        .then((response) => response.json())
@@ -37,12 +37,12 @@ let startLoad = {
 
 let onForecast = {
     "apiKey": "fe350fcf1bdf0b9498e33816a7a5fca8",
-    onfetchForecast: function (seattle) {
-        fetch ("https://api.openweathermap.org/data/2.5/forecast?q=seattle"
+    onfetchForecast: function (cupertino) {
+        fetch ("https://api.openweathermap.org/data/2.5/forecast?q=cupertino"
         + "&appid="
         + this.apiKey)
         .then((response) => response.json())
-        .then((data) => this.displayForecast(data));
+        .then((data) => this.onDisplayForecast(data));
     },
 
     onDisplayForecast: function (data) {
@@ -57,24 +57,18 @@ let onForecast = {
             var forecastInfo = document.createElement("h4");
                 forecastInfo.innerText = fMonth + "/" + fDay + "/" + fYear;
                 forecasts[i].append(forecastInfo);
-
-        var fIcon = document.createElement("img");
-        fIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[forecastTime].weather[0].icon + "@2x.png");
-        forecasts[i].append(fIcon);
-        
-
-        var fTemp = document.createElement("p");
-        fTemp.innerHTML = "Temp: " + (Math.round(((data.list[forecastTime].main.temp - 273.15) * 9 / 5 + 32) * 100) / 100) + "°F";
-        forecasts[i].append(fTemp);
-        
-
-        var fWind = document.createElement("p");
-        fWind.innerHTML = "Wind: " + (Math.round(2.23694 * data.list[forecastTime].wind.speed * 100) / 100) + " MPH";
-        forecasts[i].append(fWind);
-
-        var fHumidity = document.createElement("p");
-        fHumidity.innerHTML = "Humidity: " + data.list[forecastTime].main.humidity + " %";
-        forecasts[i].append(fHumidity);
+            var fIcon = document.createElement("img");
+            fIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[forecastTime].weather[0].icon + ".png");
+            forecasts[i].append(fIcon);
+            var fTemp = document.createElement("p");
+            fTemp.innerHTML = "Temp: " + (Math.round(((data.list[forecastTime].main.temp - 273.15) * 9 / 5 + 32) * 100) / 100) + "°F";
+            forecasts[i].append(fTemp);
+            var fWind = document.createElement("p");
+            fWind.innerHTML = "Wind: " + (Math.round(2.23694 * data.list[forecastTime].wind.speed * 100) / 100) + " mph";
+            forecasts[i].append(fWind);
+            var fHumidity = document.createElement("p");
+            fHumidity.innerHTML = "Humidity: " + data.list[forecastTime].main.humidity + " %";
+            forecasts[i].append(fHumidity);
         }
     }
 }
@@ -82,7 +76,7 @@ let onForecast = {
 
 
 //---------------------------------------------------------------------------------------------------------------------//
-//CURRENT WEATHER
+//CURRENT DAY WEATHER
 // //This function makes the call to the API
 // //Then runs the function to display it
 let currentWeather = {
@@ -113,16 +107,6 @@ let currentWeather = {
     },
 };
 
-
-//This creates a function to listen fo the click on the search button 
-//Which then goes into the VAR "currentWeather" and "forecast" then executes the "search" functions 
-document.querySelector(".search-btn").addEventListener("click", function () {
-    currentWeather.search ();
-    forecast.search2 ();
-});
-
-
-
 //--------------------------------------------------------------------------------------------------------------------//
 // 5-DAY FORECAST
 let forecast = {
@@ -148,32 +132,31 @@ let forecast = {
             var forecastInfo = document.createElement("h4");
                 forecastInfo.innerText = fMonth + "/" + fDay + "/" + fYear;
                 forecasts[i].append(forecastInfo);
-
-        var fIcon = document.createElement("img");
-        fIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[forecastTime].weather[0].icon + "@2x.png");
-        forecasts[i].append(fIcon);
-        
-
-        var fTemp = document.createElement("p");
-        fTemp.innerHTML = "Temp: " + (Math.round(((data.list[forecastTime].main.temp - 273.15) * 9 / 5 + 32) * 100) / 100) + "°F";
-        forecasts[i].append(fTemp);
-        
-
-        var fWind = document.createElement("p");
-        fWind.innerHTML = "Wind: " + (Math.round(2.23694 * data.list[forecastTime].wind.speed * 100) / 100) + " MPH";
-        forecasts[i].append(fWind);
-
-        var fHumidity = document.createElement("p");
-        fHumidity.innerHTML = "Humidity: " + data.list[forecastTime].main.humidity + " %";
-        forecasts[i].append(fHumidity);
+            var fIcon = document.createElement("img");
+            fIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[forecastTime].weather[0].icon + ".png");
+            forecasts[i].append(fIcon);
+            var fTemp = document.createElement("p");
+            fTemp.innerHTML = "Temp: " + (Math.round(((data.list[forecastTime].main.temp - 273.15) * 9 / 5 + 32) * 100) / 100) + "°F";
+            forecasts[i].append(fTemp);
+            var fWind = document.createElement("p");
+            fWind.innerHTML = "Wind: " + (Math.round(2.23694 * data.list[forecastTime].wind.speed * 100) / 100) + " mph";
+            forecasts[i].append(fWind);
+            var fHumidity = document.createElement("p");
+            fHumidity.innerHTML = "Humidity: " + data.list[forecastTime].main.humidity + " %";
+            forecasts[i].append(fHumidity);
         }
-        
     },
     search2: function () {
         this.fetchForecast(document.querySelector(".search-bar").value);
     },
 };
 
+//This creates a function to listen fo the click on the search button 
+//Which then goes into the VAR "currentWeather" and "forecast" then executes the "search" functions 
+document.querySelector(".search-btn").addEventListener("click", function () {
+    currentWeather.search ();
+    forecast.search2 ();
+});
 
 //-------------------------------------------------------------------------------------------------------------------//
 // //Recent history load and buttons below 
