@@ -3,6 +3,13 @@ var today = moment();
 $("#todays-date").text(today.format("MMM Do, YYYY"));
 // var apiKey = "fe350fcf1bdf0b9498e33816a7a5fca8"
 var forecasts = document.querySelectorAll(".forecasts");
+var searchHistoryEl = document.querySelector("#search-history");
+const searchBar = document.querySelector(".search-Bar") 
+const submitbtn = document.querySelector("#submit"); 
+const cityRef = document.querySelector("#search-history"); 
+var city;
+var cityName;
+var cities;
 
 //--------------------------------------------------------------------------------------------------------------------//
 //ON-LOAD
@@ -72,8 +79,6 @@ let onForecast = {
         }
     }
 }
-
-
 
 //---------------------------------------------------------------------------------------------------------------------//
 //CURRENT DAY WEATHER
@@ -159,31 +164,23 @@ document.querySelector(".search-btn").addEventListener("click", function () {
 });
 
 //-------------------------------------------------------------------------------------------------------------------//
-// //Recent history load and buttons below 
+//Recent history load and buttons below 
 
-// const searchBar = document.querySelector("#searchBar") //cityInput
-// const submitbtn = document.querySelector("#submit"); //submitBtn
-// const cityRef = document.querySelector("#search-history"); //cityref
-// var city;
-// var cityName;
-// var cities;
+//Local Storage
+function storeEntries() {
+    var cityName = searchBar.value;
+    console.log(cityName);
+    // var newList = document.createElement("li");
+    // var recentSearchBtn = document.createElement("button")
+    // cityRef.appendChild(newList);
+    // newList.appendChild(recentSearchBtn);
+    // cityName = searchBar.val;
+    // cities = (cityName);
+    // recentSearchBtn.textContent = cityName;
+    localStorage.setItem("City",JSON.stringify(cityName));
+    // localStorage.getItem("City");
+}
 
-// submitbtn.addEventListener("click",searchHistory);
-
-
-// function searchHistory() {
-//     var newList = document.createElement("li");
-//     var recentSearchBtn = document.createElement("button")
-//     cityRef.appendChild(newList);
-//     newList.appendChild(recentSearchBtn);
-//     cityName = searchBar.val;
-//     cities = (cityName);
-//     recentSearchBtn.textContent = cityName;
-//     localStorage.setItem("City",JSON.stringify(cities))
-//     localStorage.getItem("City");
-// }
-
-   
 
 //-----------------------------test------------------------------------------------------------------------------------------//
 //For forecast
